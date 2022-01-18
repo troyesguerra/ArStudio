@@ -224,6 +224,7 @@ html {
     right: -30rem;
     background-color: #fff;
     transition: right 0.5s;
+    z-index: 100;
 }
 
 /* Unhide Sidebar Class*/
@@ -391,4 +392,278 @@ html {
     width: 100%;
     object-fit: cover;
     opacity: 0.7;
+}
+
+/* TEAM SECTION */
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem 20rem 5rem;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+    width: 100%;
+}
+
+.card {
+    width: 27rem;
+    height: 45rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 0.5rem;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: 0.5;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0 .2rem 0.5rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+/* animate and hover effect*/
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+.card-info h2 {
+    font-family: 'Baloo Da 2', sans-serif;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    color: #eee;
+}
+
+.card-info h3 {
+    font-family: 'Muli', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #a52a2a;
+    margin-bottom: 1rem;
+}
+
+.card-info p {
+    font-family: 'Baloo Da 2', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+    color: #eee;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.card-info button {
+    width: 10rem;
+    height: 3rem;
+    background-color: rgba(230, 115, 0, 1);
+    border: none;
+    font-family: 'Baloo Da 2', serif;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    color: #eee;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+
+/* CONTACT SECTION */
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    width: 60%;
+    height: 75rem;
+    display: flex;
+    /* background-color: #fff; */
+    box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
+}
+
+.contact-left {
+    width: 35%;
+    /* background-image: url('images/Leftpic.jpg');
+    background-position: center;
+    background-repeat: (no-repeat); */
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.5)),
+        url('images/LP3.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.contact-right {
+    width: 65%;
+    background-color: #eee;
+    padding: 3rem 10rem 10rem 10rem;
+}
+
+.contact-heading {
+    font-family: 'Baloo Da 2', serif;
+    font-size: 6rem;
+    font-weight: 300;
+    color: #272727;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.contact-right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+}
+
+.field:focus {
+    border-bottom-style: solid;
+}
+
+.field {
+    width: 45rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem dashed #636363;
+    margin: 3rem 0;
+    padding: 1rem 1rem 1rem 0;
+    font-family: 'Muli', serif;
+    font-size: 1.6rem;
+    color: #4b4b4b
+}
+
+.input-group input {
+    height: 4rem;
+}
+
+.input-group textarea {
+    max-height: 7rem;
+    max-width: 45rem;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    font-family: 'Baloo Da 2', serif;
+    font-size: 1.8rem;
+    color: #4b4b4b;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.input-label {
+    bottom: 3rem;
+}
+
+.message {
+    bottom: 6rem;
+}
+
+/* general sibiling selector */
+.field:focus~label {
+    transform: translateY(-3rem);
+    font-size: 1.2rem;
+}
+
+.submit-btn {
+    width: 45rem;
+    height: 5rem;
+    background-color: rgba(230, 115, 0, 1);
+    color: #fff;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-family: 'Muli', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+
+}
+
+/* FOOTER SECTION */
+.footer {
+    width: 100%;
+    height: 15rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-family: 'Baloo Da 2', serif;
+    font-size: 1.6rem;
+    color: #a7a7a7;
+}
+
+.social-list a {
+    margin: 0 2rem;
+}
+
+.social-list i {
+    font-size: 2rem;
+    color: #a7a7a7;
+}
+
+/* SCROLL BUTTON */
+
+.scroll-btn {
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: rgba(230, 115, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
 }
